@@ -17,8 +17,8 @@ const Projects = () => {
       image: '/public/img/shopco.png',
       description: 'A  e-commerce website frontend made  with React, and Tailwind CSS.',
       technologies: ['React', 'Tailwind CSS'],
-      link: '#',
-      github: '#'
+      link: 'https://github.com/Iam-samyog/E-commerceshop',
+      github: 'https://github.com/Iam-samyog/E-commerceshop'
     },
     {
       id: 2,
@@ -27,8 +27,8 @@ const Projects = () => {
       image: '/img/quickspace.png',
       description: 'A commercial website for the solution companies',
       technologies: ['React','Tailwind CSS'],
-      link: '#',
-      github: '#'
+      link: 'https://github.com/Iam-samyog/Quickspace',
+      github: 'https://github.com/Iam-samyog/Quickspace'
     },
     {
       id: 3,
@@ -37,8 +37,8 @@ const Projects = () => {
       image: '/img/Informat.png',
       description: 'A modern newspaper design with minimalist aesthetics.',
       technologies: ['React', 'Tailwind CSS','API Integration'],
-      link: '#',
-      github: '#'
+      link: 'https://github.com/Iam-samyog/Informat-Modern-Newspaper-Website',
+      github: 'https://github.com/Iam-samyog/Informat-Modern-Newspaper-Website'
     },
     {
       id: 4,
@@ -48,18 +48,18 @@ const Projects = () => {
       description: 'A travel website with booking and itinerary features.',
       
       technologies: ['React', 'Tailwind CSS'],
-      link: '#',
-      github: '#'
+      link: 'https://github.com/Iam-samyog/Acenda',
+      github: 'https://github.com/Iam-samyog/Acenda'
     },
-    {
+   {
       id: 5,
-      title: 'Todos',
+      title: 'Quizo',
       category: 'Django',
-      image: "/img/todo's.png",
-      description: 'A Todos website that has CRUD operation.',
-      technologies: ['HTML', 'Python', 'Django'],
-      link: '#',
-      github: '#'
+      image: '/img/quizo.png',
+      description: 'A quiz website with user authentication and quiz ',
+      technologies: ['HTML', 'Python', 'Django','JavaScript'],
+      link: 'https://github.com/Iam-samyog/Quizo',
+      github: 'https://github.com/Iam-samyog/Quizo'
     },
     {
       id: 6,
@@ -69,18 +69,20 @@ const Projects = () => {
       description: 'A food receipe finder website with user authentication and receipes.',
    
       technologies: ['HTML', 'Python', 'Django','JavaScript'],
-      link: '#',
-      github: '#'
+      link: 'https://github.com/Iam-samyog/FoodieX',
+      github: 'https://github.com/Iam-samyog/FoodieX',
+
     },
-    {
+    
+     {
       id: 7,
-      title: 'Quizo',
+      title: 'Todos',
       category: 'Django',
-      image: '/img/quizo.png',
-      description: 'A quiz website with user authentication and quiz ',
-      technologies: ['HTML', 'Python', 'Django','JavaScript'],
-      link: '#',
-      github: '#'
+      image: "/img/todo's.png",
+      description: 'A Todos website that has CRUD operation.',
+      technologies: ['HTML', 'Python', 'Django'],
+      link: 'https://github.com/Iam-samyog/Todo-s',
+      github: 'https://github.com/Iam-samyog/Todo-s'
     },
   ];
 
@@ -123,7 +125,7 @@ const Projects = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.slice(0,6).map((project, index) => (
             <div
               key={project.id}
               className={`bg-gray-900 rounded-xl overflow-hidden border border-gray-700 group hover:border-blue-500 transition-all duration-500 transform ${
@@ -187,7 +189,7 @@ const Projects = () => {
           }`}
         >
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/Iam-samyog"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3 bg-gray-700 rounded-full font-medium inline-flex items-center gap-2 hover:bg-gray-600 transition-all duration-300 hover:scale-105 active:scale-95"
