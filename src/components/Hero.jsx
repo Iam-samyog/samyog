@@ -154,14 +154,14 @@ const Hero = () => {
           </motion.div>
         </div>
       </div> */}
-      <div className="container mx-auto px-4 z-10">
-  <div className="flex flex-col md:flex-row items-center justify-center min-h-screen space-y-8 md:space-y-0 md:space-x-16">
+    <div className="container mx-auto px-4 z-10">
+  <div className="flex flex-col md:flex-row items-center justify-end min-h-screen">
     {/* Introduction Text Section */}
     <motion.div
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1"
+      className="w-full md:w-1/2 text-center md:text-left xl:ml-[150px] order-2 md:order-1 md:pr-2"
     >
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
@@ -213,40 +213,6 @@ const Hero = () => {
           View My Work
         </motion.a>
       </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
-        className="mt-12 flex justify-center md:justify-start"
-      >
-        <motion.a
-          href="#about"
-          animate={{ 
-            y: [0, 10, 0],
-          }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-          }}
-          className="inline-block"
-        >
-          <svg
-            className="w-8 h-8"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
-        </motion.a>
-      </motion.div>
     </motion.div>
 
     {/* Profile Image Section */}
@@ -254,17 +220,47 @@ const Hero = () => {
       initial={{ opacity: 0, x: 50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-full md:w-1/2 flex justify-center order-1 md:order-2"
+      className="w-full md:w-1/2 flex justify-center order-1 md:order-2 md:pl-4"
     >
       <div className="relative inline-block">
         <div className="absolute -inset-2 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full blur opacity-30"></div>
         <img
           src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXRhZXNqNno2cmFzOXJwbzJqZmg2Zmh4cXJuMWVwbTE5Y2JubTY2ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8ArzbGWLVNQzRv1aAL/giphy.gif"
           alt="Profile"
-          className="w-80 h-80 md:w-96 md:h-96 rounded-full border-8 border-blue-500 relative z-10"
+          className="w-80 h-80 md:w-115 md:h-115 rounded-full border-8 border-blue-500 relative z-10"
         />
       </div>
     </motion.div>
+  </div>
+
+  {/* Downward Arrow - Centered Below Both Sections */}
+  <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+    <motion.a
+      href="#about"
+      animate={{ 
+        y: [0, 10, 0],
+      }}
+      transition={{
+        duration: 1.5,
+        repeat: Infinity,
+      }}
+      className="inline-block"
+    >
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M19 14l-7 7m0 0l-7-7m7 7V3"
+        />
+      </svg>
+    </motion.a>
   </div>
 </div>
     </section>
