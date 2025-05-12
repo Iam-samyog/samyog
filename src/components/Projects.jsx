@@ -37,7 +37,7 @@ const Projects = () => {
       image: '/img/Informat.png',
       description: 'A modern newspaper design with minimalist aesthetics.',
       technologies: ['React', 'Tailwind CSS','API Integration'],
-      link: 'https://github.com/Iam-samyog/Informat-Modern-Newspaper-Website',
+      link: 'https://informat-chi.vercel.app/',
       github: 'https://github.com/Iam-samyog/Informat-Modern-Newspaper-Website'
     },
     {
@@ -48,7 +48,7 @@ const Projects = () => {
       description: 'A travel website with booking and itinerary features.',
       
       technologies: ['React', 'Tailwind CSS'],
-      link: 'https://github.com/Iam-samyog/Acenda',
+      link: 'https://acenda-five.vercel.app/',
       github: 'https://github.com/Iam-samyog/Acenda'
     },
    {
