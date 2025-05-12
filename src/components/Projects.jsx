@@ -17,7 +17,7 @@ const Projects = () => {
       image: '/img/shopco.png',
       description: 'A  e-commerce website frontend made  with React, and Tailwind CSS.',
       technologies: ['React', 'Tailwind CSS'],
-      link: 'https://github.com/Iam-samyog/E-commerceshop',
+      link: 'https://shopco-eight-beta.vercel.app/',
       github: 'https://github.com/Iam-samyog/E-commerceshop'
     },
     {
@@ -27,7 +27,7 @@ const Projects = () => {
       image: '/img/quickspace.png',
       description: 'A commercial website for the solution companies',
       technologies: ['React','Tailwind CSS'],
-      link: 'https://github.com/Iam-samyog/Quickspace',
+      link: 'https://quickspace-seven.vercel.app/home',
       github: 'https://github.com/Iam-samyog/Quickspace'
     },
     {
