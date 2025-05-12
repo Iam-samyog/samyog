@@ -35,7 +35,7 @@ const About = () => {
               />
             </div>
           </motion.div>
-  {/* // src="https://media1.tenor.com/m/SxJQcg2-UGkAAAAC/working-from.gif" */}
+  {/* // src="" */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}

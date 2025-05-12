@@ -154,20 +154,23 @@ const Hero = () => {
           </motion.div>
         </div>
       </div> */}
-    <div className="container mx-auto px-4 z-10">
-  <div className="flex flex-col md:flex-row items-center justify-end min-h-screen">
+<div className="container mx-auto px-4 z-10">
+  <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen space-y-8 lg:space-y-0 lg:space-x-4 xl:space-x-8">
     {/* Introduction Text Section */}
     <motion.div
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-full md:w-1/2 text-center md:text-left xl:ml-[150px] order-2 md:order-1 md:pr-2"
+      className="w-full lg:w-1/2 text-center lg:text-left 
+        lg:pr-0 xl:pr-4 xl:ml-[100px]
+        px-4 sm:px-8 md:px-12 
+        order-2 lg:order-1"
     >
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
-        className="text-xl font-light mb-2"
+        className="text-lg font-semibold text-white sm:text-xl md:text-3xl  mb-2"
       >
         Hello, I'm
       </motion.h2>
@@ -176,7 +179,9 @@ const Hero = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="text-5xl md:text-6xl py-3 font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500"
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl 
+          py-3 font-bold mb-4 
+          text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500"
       >
         Samyog Maharjan
       </motion.h1>
@@ -185,7 +190,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="text-2xl md:text-3xl font-light mb-8"
+        className="text-xl sm:text-2xl md:text-3xl lg:text-2xl xl:text-3xl font-light mb-6 sm:mb-8"
       >
         I'm a <span ref={typedElementRef} className="font-medium text-blue-400"></span>
       </motion.div>
@@ -194,13 +199,17 @@ const Hero = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
-        className="flex flex-wrap gap-4 justify-center md:justify-start"
+        className="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start"
       >
         <motion.a
           href="#contact"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="px-8 py-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
+          className="px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base 
+            bg-gradient-to-r from-purple-500 to-blue-500 
+            rounded-full font-medium 
+            hover:shadow-lg hover:shadow-blue-500/30 
+            transition-all duration-300"
         >
           Contact Me
         </motion.a>
@@ -208,7 +217,11 @@ const Hero = () => {
           href="#projects"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="px-8 py-3 bg-transparent border border-blue-500 rounded-full font-medium hover:bg-blue-500/10 transition-all duration-300"
+          className="px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base 
+            bg-transparent border border-blue-500 
+            rounded-full font-medium 
+            hover:bg-blue-500/10 
+            transition-all duration-300"
         >
           View My Work
         </motion.a>
@@ -220,21 +233,25 @@ const Hero = () => {
       initial={{ opacity: 0, x: 50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-full md:w-1/2 flex justify-center order-1 md:order-2 md:pl-4"
+      className="w-full lg:w-1/2 flex justify-center order-1 lg:order-2 
+        px-4 sm:px-8 md:px-12 lg:pl-0 lg:pr-4"
     >
       <div className="relative inline-block">
         <div className="absolute -inset-2 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full blur opacity-30"></div>
         <img
           src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXRhZXNqNno2cmFzOXJwbzJqZmg2Zmh4cXJuMWVwbTE5Y2JubTY2ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8ArzbGWLVNQzRv1aAL/giphy.gif"
           alt="Profile"
-          className="w-80 h-80 md:w-115 md:h-115 rounded-full border-8 border-blue-500 relative z-10"
+          className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 
+            lg:w-80 lg:h-80 xl:w-116 xl:h-116
+            rounded-full border-6 sm:border-8 border-blue-500 
+            relative z-10"
         />
       </div>
     </motion.div>
   </div>
 
   {/* Downward Arrow - Centered Below Both Sections */}
-  <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+  <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2">
     <motion.a
       href="#about"
       animate={{ 
@@ -247,7 +264,7 @@ const Hero = () => {
       className="inline-block"
     >
       <svg
-        className="w-8 h-8"
+        className="w-6 h-6 sm:w-8 sm:h-8"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
