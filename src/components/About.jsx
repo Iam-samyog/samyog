@@ -29,7 +29,7 @@ const About = () => {
             <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 to-blue-500 rounded-xl blur opacity-20"></div>
             <div className="relative overflow-hidden rounded-xl border border-gray-700 bg-gray-900 p-1">
               <img
-                src="https://media1.tenor.com/m/SxJQcg2-UGkAAAAC/working-from.gif"
+                src="https://media1.tenor.com/m/JwRNTvlcBF4AAAAC/mario-super-mario.gif"
                 alt="About Me"
                 className="w-full h-auto rounded-lg"
               />
