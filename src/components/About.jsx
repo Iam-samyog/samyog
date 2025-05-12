@@ -29,13 +29,13 @@ const About = () => {
             <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 to-blue-500 rounded-xl blur opacity-20"></div>
             <div className="relative overflow-hidden rounded-xl border border-gray-700 bg-gray-900 p-1">
               <img
-                src="https://via.placeholder.com/600x400"
+                src="https://media1.tenor.com/m/SxJQcg2-UGkAAAAC/working-from.gif"
                 alt="About Me"
                 className="w-full h-auto rounded-lg"
               />
             </div>
           </motion.div>
-
+  {/* // src="https://media1.tenor.com/m/SxJQcg2-UGkAAAAC/working-from.gif" */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}

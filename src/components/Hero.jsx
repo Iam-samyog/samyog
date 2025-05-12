@@ -62,9 +62,9 @@ const Hero = () => {
           >
             <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full blur opacity-30"></div>
             <img
-              src="https://via.placeholder.com/150"
+              src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGJ4d3pvMTl6cnUzZG10YjAwY2MycHphbXg5cHJ2ZWRkeHV2ejB6NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/t9l9pJgTZw2lnXUuIS/giphy.gif"
               alt="Profile"
-              className="w-32 h-32 rounded-full border-4 border-blue-500 relative"
+              className="w-50 h-50 rounded-full border-4 border-blue-500 relative"
             />
           </motion.div>
 

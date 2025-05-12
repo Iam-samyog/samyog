@@ -14,7 +14,7 @@ const Projects = () => {
       id: 1,
       title: 'E-Commerce Website',
       category: 'Frontend',
-      image: '/public/img/shopco.png',
+      image: '/img/shopco.png',
       description: 'A  e-commerce website frontend made  with React, and Tailwind CSS.',
       technologies: ['React', 'Tailwind CSS'],
       link: 'https://github.com/Iam-samyog/E-commerceshop',
