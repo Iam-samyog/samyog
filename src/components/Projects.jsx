@@ -13,66 +13,78 @@ const Projects = () => {
     {
       id: 1,
       title: 'E-Commerce Website',
-      category: 'web',
-      image: '/api/placeholder/600/400',
-      description: 'A full-stack e-commerce website with React, Node.js, and MongoDB.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
+      category: 'Frontend',
+      image: '/public/img/shopco.png',
+      description: 'A  e-commerce website frontend made  with React, and Tailwind CSS.',
+      technologies: ['React', 'Tailwind CSS'],
       link: '#',
       github: '#'
     },
     {
       id: 2,
-      title: 'Task Management App',
-      category: 'web',
-      image: '/api/placeholder/600/400',
-      description: 'A task management application with drag and drop functionality.',
-      technologies: ['React', 'Redux', 'Firebase'],
+      title: 'Quickspace Website',
+      category: 'Frontend',
+      image: '/img/quickspace.png',
+      description: 'A commercial website for the solution companies',
+      technologies: ['React','Tailwind CSS'],
       link: '#',
       github: '#'
     },
     {
       id: 3,
-      title: 'Portfolio Design',
-      category: 'design',
-      image: '/api/placeholder/600/400',
-      description: 'A modern portfolio design with minimalist aesthetics.',
-      technologies: ['Figma', 'Adobe XD'],
+      title: 'Informat',
+      category: 'Frontend',
+      image: '/img/Informat.png',
+      description: 'A modern newspaper design with minimalist aesthetics.',
+      technologies: ['React', 'Tailwind CSS','API Integration'],
       link: '#',
       github: '#'
     },
     {
       id: 4,
-      title: 'Weather App',
-      category: 'mobile',
-      image: '/api/placeholder/600/400',
-      description: 'A mobile weather application with real-time updates.',
-      technologies: ['React Native', 'API Integration'],
+      title: 'Acenda Travel Website',
+      category: 'Frontend',
+      image: '/img/Acenda.png',
+      description: 'A travel website with booking and itinerary features.',
+      
+      technologies: ['React', 'Tailwind CSS'],
       link: '#',
       github: '#'
     },
     {
       id: 5,
-      title: 'Blog Platform',
-      category: 'web',
-      image: '/api/placeholder/600/400',
-      description: 'A full-featured blog platform with CMS functionality.',
-      technologies: ['Next.js', 'GraphQL', 'MongoDB'],
+      title: 'Todos',
+      category: 'Django',
+      image: "/img/todo's.png",
+      description: 'A Todos website that has CRUD operation.',
+      technologies: ['HTML', 'Python', 'Django'],
       link: '#',
       github: '#'
     },
     {
       id: 6,
-      title: 'Dashboard UI',
-      category: 'design',
-      image: '/api/placeholder/600/400',
-      description: 'An admin dashboard UI with analytics and data visualization.',
-      technologies: ['React', 'D3.js', 'Tailwind CSS'],
+      title: 'FoodieX',
+      category: 'Django',
+      image: '/img/FoodieX.png',
+      description: 'A food receipe finder website with user authentication and receipes.',
+   
+      technologies: ['HTML', 'Python', 'Django','JavaScript'],
+      link: '#',
+      github: '#'
+    },
+    {
+      id: 7,
+      title: 'Quizo',
+      category: 'Django',
+      image: '/img/quizo.png',
+      description: 'A quiz website with user authentication and quiz ',
+      technologies: ['HTML', 'Python', 'Django','JavaScript'],
       link: '#',
       github: '#'
     },
   ];
 
-  const categories = ['all', 'web', 'design', 'mobile'];
+  const categories = ['all', 'Frontend', 'Django'];
 
   const filteredProjects = activeFilter === 'all' 
     ? projects 
