@@ -243,7 +243,7 @@ const Hero = () => {
           alt="Profile"
           className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 
             lg:w-80 lg:h-80 xl:w-116 xl:h-116
-            rounded-full border-6 sm:border-8 border-blue-500 
+            rounded-full border-6 sm:border-8 border-black
             relative z-10"
         />
       </div>
