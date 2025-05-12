@@ -189,7 +189,7 @@ const Projects = () => {
           }`}
         >
           <a
-            href="https://github.com/Iam-samyog"
+            href="https://github.com/Iam-samyog?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3 bg-gray-700 rounded-full font-medium inline-flex items-center gap-2 hover:bg-gray-600 transition-all duration-300 hover:scale-105 active:scale-95"
