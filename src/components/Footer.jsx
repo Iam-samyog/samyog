@@ -142,7 +142,7 @@ const Footer = () => {
         >
           <p>&copy; {currentYear} Samyog. All rights reserved.</p>
           <p className="mt-2 text-sm">
-            Built with <span className="text-red-500">♥</span> using React and Tailwind CSS
+            Built with <span className="text-red-500 text-xl">♥</span> 
           </p>
         </motion.div>
       </div>
