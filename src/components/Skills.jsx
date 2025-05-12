@@ -9,18 +9,18 @@ const Skills = () => {
   }, []);
 
   const skills = [
-    { name: 'JavaScript', percentage: 90, color: 'from-yellow-400 to-yellow-600' },
-    { name: 'React', percentage: 85, color: 'from-blue-400 to-blue-600' },
-    { name: 'Node.js', percentage: 80, color: 'from-green-400 to-green-600' },
+    { name: 'JavaScript', percentage: 85, color: 'from-yellow-400 to-yellow-600' },
+    { name: 'React', percentage: 90, color: 'from-blue-400 to-blue-600' },
+    { name: 'Django', percentage: 90, color: 'from-green-400 to-green-600' },
     { name: 'HTML/CSS', percentage: 95, color: 'from-red-400 to-red-600' },
     { name: 'Tailwind CSS', percentage: 85, color: 'from-teal-400 to-teal-600' },
-    { name: 'MongoDB', percentage: 75, color: 'from-green-500 to-green-700' },
+    { name: 'Python', percentage: 95, color: 'from-green-500 to-green-700' },
   ];
 
   const technicalSkills = [
-    'JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js', 'Express', 
-    'MongoDB', 'Firebase', 'GraphQL', 'Redux', 'Tailwind CSS', 'SASS', 
-    'Git', 'GitHub', 'Figma', 'Adobe XD'
+    'JavaScript','Django', 'React', 'Next.js', 'Python', 'SQL', 
+    'Bootstrap', 'Tailwind CSS', 'SASS', 
+    'Git', 'GitHub', 'Figma'
   ];
 
   return (
