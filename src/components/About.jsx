@@ -51,7 +51,7 @@ const About = () => {
             </p>
             <p className="mb-6 text-gray-300 leading-relaxed">
               My journey in web development began when I discovered my passion for coding during 
-              college. Since then, I've worked on numerous projects, ranging from small business 
+              high school. Since then, I've worked on numerous projects, ranging from small business 
               websites to complex web applications.
             </p>
 
@@ -62,7 +62,7 @@ const About = () => {
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
                 </span>
-                <span>Name: Your Name</span>
+                <span>Name: Samyog Maharjan</span>
               </div>
               <div className="flex items-center">
                 <span className="text-blue-500 mr-2">
@@ -70,7 +70,7 @@ const About = () => {
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
                 </span>
-                <span>Email: your.email@example.com</span>
+                <span>Email: msamyog37@gmail.com</span>
               </div>
               <div className="flex items-center">
                 <span className="text-blue-500 mr-2">
@@ -78,7 +78,7 @@ const About = () => {
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
                 </span>
-                <span>Location: Your City</span>
+                <span>Location: Kathmandu,Nepal</span>
               </div>
               <div className="flex items-center">
                 <span className="text-blue-500 mr-2">
