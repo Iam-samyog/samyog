@@ -24,10 +24,10 @@ const Contact = () => {
     
     // Use EmailJS to send the email
     emailjs.sendForm(
-      'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-      'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+      import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
       form.current,
-      'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+      import.meta.env.VITE_EMAILJS_USER_ID
     )
       .then((result) => {
         console.log('Email sent successfully:', result.text);
@@ -134,7 +134,7 @@ const Contact = () => {
           >
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2 ">
                   Your Name
                 </label>
                 <input
