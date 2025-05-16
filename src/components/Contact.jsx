@@ -13,6 +13,9 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
+  // Initialize EmailJS with your user ID
+
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -22,12 +25,22 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
+    // Check if environment variables are available
+    if (!import.meta.env.VITE_EMAILJS_SERVICE_ID || 
+        !import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 
+        !import.meta.env.VITE_EMAILJS_PUBLIC_KEY) {
+      console.error('EmailJS environment variables are missing');
+      setIsSubmitting(false);
+      setSubmitStatus('error');
+      return;
+    }
+    
     // Use EmailJS to send the email
     emailjs.sendForm(
       import.meta.env.VITE_EMAILJS_SERVICE_ID, 
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
       form.current,
-      import.meta.env.VITE_EMAILJS_USER_ID
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
       .then((result) => {
         console.log('Email sent successfully:', result.text);
@@ -86,6 +99,7 @@ const Contact = () => {
     },
   ];
 
+
   return (
     <section id="contact" className="py-20 bg-gray-900 relative">
       {/* Decorative Elements */}
@@ -93,6 +107,7 @@ const Contact = () => {
         <div className="absolute -top-20 -left-20 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 -right-32 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
       </div>
+   
       
       <div className="container mx-auto max-w-[1350px] px-4 relative z-10">
         <div className="text-center mb-16">
