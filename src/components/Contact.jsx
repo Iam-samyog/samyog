@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
-import { motion} from 'framer-motion';
 const Contact = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,17 +22,34 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      
-      // Reset status after 5 seconds
-      setTimeout(() => {
-        setSubmitStatus(null);
-      }, 5000);
-    }, 1500);
+    // Use EmailJS to send the email
+    emailjs.sendForm(
+      'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+      'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+      form.current,
+      'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+    )
+      .then((result) => {
+        console.log('Email sent successfully:', result.text);
+        setIsSubmitting(false);
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        
+        // Reset status after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus(null);
+        }, 5000);
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+        setIsSubmitting(false);
+        setSubmitStatus('error');
+        
+        // Reset error status after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus(null);
+        }, 5000);
+      });
   };
 
   const contactInfo = [
@@ -77,60 +95,40 @@ const Contact = () => {
       </div>
       
       <div className="container mx-auto max-w-[1350px] px-4 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true, amount: 0.2 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-2">Get In Touch</h2>
           <div className="w-20 h-1 bg-blue-500 mx-auto"></div>
           <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
             Feel free to contact me for any project or collaboration. I'm always open to discussing new opportunities.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {contactInfo.map((info, index) => (
-            <motion.a
+            <a
               key={index}
               href={info.link}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true, amount: 0.2 }}
               className="flex flex-col items-center p-6 bg-gray-800 rounded-xl border border-gray-700 hover:border-blue-500 transition-colors duration-300"
-              whileHover={{ y: -5, boxShadow: '0 10px 25px -5px rgba(59, 130, 246, 0.4)' }}
             >
               <div className="w-16 h-16 flex items-center justify-center bg-blue-500/10 text-blue-500 rounded-full mb-4">
                 {info.icon}
               </div>
               <h3 className="text-xl font-semibold mb-2">{info.title}</h3>
               <p className="text-gray-400 text-center">{info.content}</p>
-            </motion.a>
+            </a>
           ))}
         </div>
 
         <div className="max-w-4xl mx-auto bg-gray-800 rounded-xl p-8 border border-gray-700">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true, amount: 0.2 }}
-            className="mb-8"
-          >
+          <div className="mb-8">
             <h3 className="text-2xl font-semibold mb-4 text-blue-400">Send Me a Message</h3>
             <p className="text-gray-400">
               Have a question or want to work together? Feel free to send me a message.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.form
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true, amount: 0.2 }}
+          <form
+            ref={form}
             onSubmit={handleSubmit}
             className="space-y-6"
           >
@@ -196,11 +194,9 @@ const Contact = () => {
             </div>
 
             <div>
-              <motion.button
+              <button
                 type="submit"
                 disabled={isSubmitting}
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
                 className="px-8 py-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg font-medium text-white inline-flex items-center gap-2 hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 disabled:opacity-70"
               >
                 {isSubmitting ? (
@@ -219,19 +215,21 @@ const Contact = () => {
                     </svg>
                   </>
                 )}
-              </motion.button>
+              </button>
             </div>
 
             {submitStatus === 'success' && (
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="p-4 bg-green-500/20 border border-green-500 rounded-lg text-green-400"
-              >
+              <div className="p-4 bg-green-500/20 border border-green-500 rounded-lg text-green-400">
                 Your message has been sent successfully. I'll get back to you soon!
-              </motion.div>
+              </div>
             )}
-          </motion.form>
+            
+            {submitStatus === 'error' && (
+              <div className="p-4 bg-red-500/20 border border-red-500 rounded-lg text-red-400">
+                There was an error sending your message. Please try again later.
+              </div>
+            )}
+          </form>
         </div>
       </div>
     </section>
