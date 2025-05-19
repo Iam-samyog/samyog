@@ -150,7 +150,7 @@ const Footer = () => {
     viewport={{ once: true, amount: 0.2 }}
     className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500"
   >
-    <p>&copy; {new Date().getFullYear()} Samyog. All rights reserved.</p>
+    <p>&copy; {currentYear} Samyog. All rights reserved.</p>
     <p className="mt-2 text-sm">
       Built with <span className="text-red-500 text-xl">♥</span>
     </p>
