@@ -27,7 +27,7 @@ const Projects = () => {
       image: '/img/quickspace.png',
       description: 'A commercial website for the solution companies',
       technologies: ['React','Tailwind CSS'],
-      link: 'https://quickspace-seven.vercel.app/home',
+      link: 'https://quickspace-seven.vercel.app/',
       github: 'https://github.com/Iam-samyog/Quickspace'
     },
     {
