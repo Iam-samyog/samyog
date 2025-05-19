@@ -54,98 +54,109 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 border-t border-gray-800">
-      <div className="container mx-auto max-w-[1350px] px-4 py-12">
-        <div className="grid md:grid-cols-3 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true, amount: 0.2 }}
+     <div className="container mx-auto max-w-[1350px] px-4 py-12">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    {/* Samyog Info */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true, amount: 0.2 }}
+    >
+      <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
+        Samyog
+      </h3>
+      <p className="text-gray-400 mb-6">
+        A showcase of my projects, skills, and experience as a Computer Scientist.
+      </p>
+      <div className="flex space-x-4">
+        {socialLinks.map((social, index) => (
+          <motion.a
+            key={index}
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
           >
-            <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">Samyog</h3>
-            <p className="text-gray-400 mb-6">
-              A showcase of my projects, skills, and experience as a Computer Scientist.
-            </p>
-            <div className="flex space-x-4">
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={index}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:bg-blue-500 hover:text-white transition-colors duration-300"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  {social.icon}
-                </motion.a>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-gray-400 hover:text-blue-400 transition-colors duration-300 flex items-center"
-                  >
-                    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            <h3 className="text-xl font-semibold mb-4">Newsletter</h3>
-            <p className="text-gray-400 mb-4">
-              Subscribe to my newsletter to receive updates on my latest projects and tech articles.
-            </p>
-            <form className="flex">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent flex-grow"
-              />
-              <button
-                type="submit"
-                className="px-4 py-2 bg-blue-500 text-white rounded-r-lg hover:bg-blue-600 transition-colors duration-300"
-              >
-                Subscribe
-              </button>
-            </form>
-          </motion.div>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          viewport={{ once: true, amount: 0.2 }}
-          className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500"
-        >
-          <p>&copy; {currentYear} Samyog. All rights reserved.</p>
-          <p className="mt-2 text-sm">
-            Built with <span className="text-red-500 text-xl">♥</span> 
-          </p>
-        </motion.div>
+            {social.icon}
+          </motion.a>
+        ))}
       </div>
+    </motion.div>
+
+    {/* Quick Links */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
+    >
+      <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
+      <ul className="space-y-2">
+        {quickLinks.map((link, index) => (
+          <li key={index}>
+            <a
+              href={link.href}
+              className="text-gray-400 hover:text-blue-400 transition-colors duration-300 flex items-center"
+            >
+              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fillRule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              {link.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </motion.div>
+
+    {/* Newsletter */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.4 }}
+      viewport={{ once: true, amount: 0.2 }}
+    >
+      <h3 className="text-xl font-semibold mb-4">Newsletter</h3>
+      <p className="text-gray-400 mb-4">
+        Subscribe to my newsletter to receive updates on my latest projects and tech articles.
+      </p>
+      <form className="flex flex-col sm:flex-row">
+        <input
+          type="email"
+          placeholder="Your email address"
+          className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg sm:rounded-l-lg sm:rounded-r-none mb-2 sm:mb-0 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-grow"
+        />
+        <button
+          type="submit"
+          className="px-4 py-2 bg-blue-500 text-white rounded-lg sm:rounded-r-lg sm:rounded-l-none hover:bg-blue-600 transition-colors duration-300"
+        >
+          Subscribe
+        </button>
+      </form>
+    </motion.div>
+  </div>
+
+  {/* Footer Bottom */}
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, delay: 0.6 }}
+    viewport={{ once: true, amount: 0.2 }}
+    className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500"
+  >
+    <p>&copy; {new Date().getFullYear()} Samyog. All rights reserved.</p>
+    <p className="mt-2 text-sm">
+      Built with <span className="text-red-500 text-xl">♥</span>
+    </p>
+  </motion.div>
+</div>
+
     </footer>
   );
 };
