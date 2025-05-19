@@ -91,7 +91,7 @@ const About = () => {
             </div>
 
             <motion.a
-              href="#contact"
+              href="/cv/Samyog-Maharjan-cv (15).pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full font-medium inline-block hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
