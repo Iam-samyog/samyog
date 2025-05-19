@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -13,8 +13,15 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  // Initialize EmailJS with your user ID
-
+  // Initialize EmailJS with your public key
+  useEffect(() => {
+    if (import.meta.env.VITE_EMAILJS_PUBLIC_KEY) {
+      emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+      console.log("EmailJS initialized");
+    } else {
+      console.error("EmailJS public key is missing");
+    }
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,6 +31,13 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    
+    // Debug environment variables in the console
+    console.log("Environment variables availability:", {
+      serviceId: !!import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      templateId: !!import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      publicKey: !!import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    });
     
     // Check if environment variables are available
     if (!import.meta.env.VITE_EMAILJS_SERVICE_ID || 
@@ -54,7 +68,7 @@ const Contact = () => {
         }, 5000);
       })
       .catch((error) => {
-        console.error('Error sending email:', error);
+        console.error('Error sending email:', error.text);
         setIsSubmitting(false);
         setSubmitStatus('error');
         
@@ -65,7 +79,9 @@ const Contact = () => {
       });
   };
 
+  // Rest of the component stays the same...
   const contactInfo = [
+    // Your contact info array remains unchanged
     {
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -99,8 +115,8 @@ const Contact = () => {
     },
   ];
 
-
   return (
+    // Your JSX return remains unchanged
     <section id="contact" className="py-20 bg-gray-900 relative">
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
