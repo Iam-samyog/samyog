@@ -63,7 +63,7 @@ const Footer = () => {
       transition={{ duration: 0.5 }}
       viewport={{ once: true, amount: 0.2 }}
     >
-      <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
+      <h3 className="text-4xl logosign font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
         Samyog
       </h3>
       <p className="text-gray-400 mb-6">
