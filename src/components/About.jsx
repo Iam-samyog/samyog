@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import React from 'react';
+
 
 const About = () => {
   return (
@@ -12,7 +12,9 @@ const About = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="text-center mb-8 md:mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">About Me</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+            About Me
+          </h2>
           <div className="w-16 sm:w-20 h-1 bg-blue-500 mx-auto"></div>
         </motion.div>
 
@@ -34,7 +36,7 @@ const About = () => {
               />
             </div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -42,47 +44,88 @@ const About = () => {
             viewport={{ once: true, amount: 0.2 }}
             className="w-full md:w-1/2 mt-8 md:mt-0"
           >
-            <h3 className="text-xl sm:text-2xl font-semibold mb-3 md:mb-4 text-blue-400">Web Developer & Designer</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-3 md:mb-4 text-blue-400">
+              Web Developer & Designer
+            </h3>
             <p className="mb-4 md:mb-6 text-gray-300 text-sm sm:text-base leading-relaxed">
-              Hi there! I'm a passionate web developer and designer with a keen eye for creating 
-              beautiful, functional websites. With over X years of experience in the field, 
-              I specialize in building modern web applications using the latest technologies.
+              I am a passionate full-stack web developer who loves building
+              meaningful and user-friendly web applications. Using Python Django
+              and React, I enjoy bringing ideas to life—turning simple concepts
+              into real, working products that people can use and enjoy.
             </p>
             <p className="mb-4 md:mb-6 text-gray-300 text-sm sm:text-base leading-relaxed">
-              My journey in web development began when I discovered my passion for coding during 
-              high school. Since then, I've worked on numerous projects, ranging from small business 
-              websites to complex web applications.
+              What drives me most is the creative process and the constant
+              learning that comes with development. I’m excited by the challenge
+              of solving problems through code and continuously improving my
+              skills to create smarter, cleaner, and more impactful digital
+              experiences.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 mb-6 md:mb-8">
               <div className="flex items-center text-sm sm:text-base">
                 <span className="text-blue-500 mr-2 flex-shrink-0">
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                  <svg
+                    className="w-4 h-4 sm:w-5 sm:h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clipRule="evenodd"
+                    ></path>
                   </svg>
                 </span>
                 <span className="break-words">Name: Samyog Maharjan</span>
               </div>
               <div className="flex items-center text-sm sm:text-base">
                 <span className="text-blue-500 mr-2 flex-shrink-0">
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                  <svg
+                    className="w-4 h-4 sm:w-5 sm:h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clipRule="evenodd"
+                    ></path>
                   </svg>
                 </span>
                 <span className="break-all">Email: msamyog37@gmail.com</span>
               </div>
               <div className="flex items-center text-sm sm:text-base">
                 <span className="text-blue-500 mr-2 flex-shrink-0">
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                  <svg
+                    className="w-4 h-4 sm:w-5 sm:h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clipRule="evenodd"
+                    ></path>
                   </svg>
                 </span>
                 <span className="break-words">Location: Kathmandu, Nepal</span>
               </div>
               <div className="flex items-center text-sm sm:text-base">
                 <span className="text-blue-500 mr-2 flex-shrink-0">
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                  <svg
+                    className="w-4 h-4 sm:w-5 sm:h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clipRule="evenodd"
+                    ></path>
                   </svg>
                 </span>
                 <span>Freelance: Available</span>
@@ -98,7 +141,6 @@ const About = () => {
             >
               Download CV
             </motion.a>
-            
           </motion.div>
         </div>
       </div>
