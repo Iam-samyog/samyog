@@ -8,6 +8,7 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { motion } from 'framer-motion';
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -42,6 +43,8 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <Analytics />
+
       <Contact />
       <Footer />
       </div>
