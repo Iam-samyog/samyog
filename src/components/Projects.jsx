@@ -84,6 +84,16 @@ const Projects = () => {
       link: 'https://github.com/Iam-samyog/Todo-s',
       github: 'https://github.com/Iam-samyog/Todo-s'
     },
+     {
+      id: 8,
+      title: 'Luminaria',
+      category: 'Django',
+      image: "/img/Luminaria.png",
+      description: 'A complete blog application',
+      technologies: ['HTML', 'Python', 'Django','PostgreSQL'],
+      link: 'https://github.com/Iam-samyog/Luminaria-',
+      github: 'https://github.com/Iam-samyog/Luminaria-'
+    },
   ];
 
   const categories = ['all', 'Frontend', 'Django'];
