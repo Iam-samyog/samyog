@@ -53,13 +53,13 @@ const Projects = () => {
     },
    {
       id: 5,
-      title: 'Quizo',
+      title: 'Luminaria',
       category: 'Django',
-      image: '/img/quizo.png',
-      description: 'A quiz website with user authentication and quiz ',
-      technologies: ['HTML', 'Python', 'Django','JavaScript'],
-      link: 'https://github.com/Iam-samyog/Quizo',
-      github: 'https://github.com/Iam-samyog/Quizo'
+      image: "/img/LuminariaBlog.png",
+      description: 'A complete blog application',
+      technologies: ['HTML', 'Python', 'Django','PostgreSQL'],
+      link: 'https://github.com/Iam-samyog/Luminaria-',
+      github: 'https://github.com/Iam-samyog/Luminaria-'
     },
     {
       id: 6,
@@ -84,15 +84,16 @@ const Projects = () => {
       link: 'https://github.com/Iam-samyog/Todo-s',
       github: 'https://github.com/Iam-samyog/Todo-s'
     },
+    
      {
       id: 8,
-      title: 'Luminaria',
+      title: 'Quizo',
       category: 'Django',
-      image: "/img/LuminariaBlog.png",
-      description: 'A complete blog application',
-      technologies: ['HTML', 'Python', 'Django','PostgreSQL'],
-      link: 'https://github.com/Iam-samyog/Luminaria-',
-      github: 'https://github.com/Iam-samyog/Luminaria-'
+      image: '/img/quizo.png',
+      description: 'A quiz website with user authentication and quiz ',
+      technologies: ['HTML', 'Python', 'Django','JavaScript'],
+      link: 'https://github.com/Iam-samyog/Quizo',
+      github: 'https://github.com/Iam-samyog/Quizo'
     },
   ];
 
