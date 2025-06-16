@@ -88,7 +88,7 @@ const Projects = () => {
       id: 8,
       title: 'Luminaria',
       category: 'Django',
-      image: "/img/Luminaria.png",
+      image: "/img/LuminariaBlog.png",
       description: 'A complete blog application',
       technologies: ['HTML', 'Python', 'Django','PostgreSQL'],
       link: 'https://github.com/Iam-samyog/Luminaria-',
