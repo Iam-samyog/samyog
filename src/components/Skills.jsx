@@ -96,10 +96,9 @@ const Skills = () => {
             >
               <h3 className="text-2xl font-semibold mb-4 text-blue-400">My Development Approach</h3>
               <p className="text-gray-300 leading-relaxed">
-                I believe in writing clean, maintainable code that focuses on both performance 
-                and user experience. My development process always begins with understanding 
-                the project requirements thoroughly and designing a solution that is scalable 
-                and efficient.
+            I’m passionate about building software that blends clean, maintainable code with great user experiences. For me, development begins with truly understanding the problem, then crafting solutions that are scalable, efficient, and future-ready. I enjoy turning ideas into polished, reliable applications while constantly learning and refining my craft to deliver my very best work.
+
+
               </p>
             </div>
           </div>
