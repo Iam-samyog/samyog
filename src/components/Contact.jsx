@@ -90,7 +90,7 @@ const Contact = () => {
       ),
       title: 'Email',
       content: 'msamyog37@gmail.com',
-      link: 'mailto:msamyog37@gmail.com'
+      link:'mailto:msamyog37@gmail.com'
     },
   {
   icon: (
@@ -108,7 +108,7 @@ const Contact = () => {
   ),
   title: 'Instagram',
   content: '@iam.samyog',
-  link: 'https://instagram.com/iam.samyog'
+  link: 'https://www.instagram.com/iam.samyog'
 },
     {
       icon: (
@@ -146,6 +146,7 @@ const Contact = () => {
           {contactInfo.map((info, index) => (
             <a
               key={index}
+              target='_blank'
               href={info.link}
               className="flex flex-col items-center p-6 bg-gray-800 rounded-xl border border-gray-700 hover:border-blue-500 transition-colors duration-300"
             >
