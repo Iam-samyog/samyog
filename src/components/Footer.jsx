@@ -1,7 +1,7 @@
 // src/components/Footer.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
-
+import NewsletterForm from './NewsletterForm';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
@@ -116,30 +116,39 @@ const Footer = () => {
     </motion.div>
 
     {/* Newsletter */}
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.4 }}
-      viewport={{ once: true, amount: 0.2 }}
+    {/* <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: 0.4 }}
+  viewport={{ once: true, amount: 0.2 }}
+>
+  <h3 className="text-xl font-semibold mb-4">Newsletter</h3>
+  <p className="text-gray-400 mb-4">
+    Subscribe to my newsletter to receive updates on my latest projects and tech articles.
+  </p>
+  <form 
+    className="flex flex-col sm:flex-row" 
+    action="https://samybyte.substack.com/subscribe"
+    method="post"
+    target="_blank"
+  >
+    <input
+      type="email"
+      name="email"
+      placeholder="Your email address"
+      required
+      className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg sm:rounded-l-lg sm:rounded-r-none mb-2 sm:mb-0 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-grow"
+    />
+    <button
+      type="submit"
+      className="px-4 py-2 bg-blue-500 text-white rounded-lg sm:rounded-r-lg sm:rounded-l-none hover:bg-blue-600 transition-colors duration-300"
     >
-      <h3 className="text-xl font-semibold mb-4">Newsletter</h3>
-      <p className="text-gray-400 mb-4">
-        Subscribe to my newsletter to receive updates on my latest projects and tech articles.
-      </p>
-      <form className="flex flex-col sm:flex-row">
-        <input
-          type="email"
-          placeholder="Your email address"
-          className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg sm:rounded-l-lg sm:rounded-r-none mb-2 sm:mb-0 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-grow"
-        />
-        <button
-          type="submit"
-          className="px-4 py-2 bg-blue-500 text-white rounded-lg sm:rounded-r-lg sm:rounded-l-none hover:bg-blue-600 transition-colors duration-300"
-        >
-          Subscribe
-        </button>
-      </form>
-    </motion.div>
+      Subscribe
+    </button>
+  </form>
+</motion.div> */}
+    <NewsletterForm/>
+   
   </div>
 
   {/* Footer Bottom */}
