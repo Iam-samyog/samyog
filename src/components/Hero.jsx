@@ -40,8 +40,8 @@ const Hero = () => {
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-              x: [0, Math.random() * 100 - 50],
-              y: [0, Math.random() * 100 - 50],
+              x: [0, Math.random() * 200 - 50],
+              y: [0, Math.random() * 200 - 50],
             }}
             transition={{
               duration: Math.random() * 3 + 3,

@@ -128,7 +128,7 @@ const About = () => {
                     ></path>
                   </svg>
                 </span>
-                <span>Freelance: Available</span>
+                <span>For Jobs: Available</span>
               </div>
             </div>
 
