@@ -1,147 +1,130 @@
 import { motion } from 'framer-motion';
-
+import Card from './ui/Card';
 
 const About = () => {
   return (
-    <section id="about" className="py-12 md:py-20 bg-gray-800">
-      <div className="container mx-auto max-w-[1350px] px-4 sm:px-6">
+    <section id="about" className="py-24 bg-black relative overflow-hidden">
+      {/* Background Decor */}
+      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-900/20 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-purple-900/20 blur-[120px] rounded-full pointer-events-none" />
+
+      <div className="container mx-auto px-4 max-w-6xl relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true, amount: 0.2 }}
-          className="text-center mb-8 md:mb-16"
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+          <h2 className="text-sm md:text-base uppercase tracking-widest text-blue-400 mb-4 font-semibold">
             About Me
           </h2>
-          <div className="w-16 sm:w-20 h-1 bg-blue-500 mx-auto"></div>
+          <h3 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+            Designing the Future, One Line at a Time.
+          </h3>
         </motion.div>
 
-        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true, amount: 0.2 }}
-            className="w-full md:w-1/2 relative"
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Bio Card - Large */}
+          <motion.div 
+             className="md:col-span-2"
+             initial={{ opacity: 0, x: -20 }}
+             whileInView={{ opacity: 1, x: 0 }}
+             viewport={{ once: true }}
+             transition={{ delay: 0.2 }}
           >
-            <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 to-blue-500 rounded-xl blur opacity-20"></div>
-            <div className="relative overflow-hidden rounded-xl border border-gray-700 bg-gray-900 p-1">
-              <img
-                src="https://media1.tenor.com/m/JwRNTvlcBF4AAAAC/mario-super-mario.gif"
-                alt="About Me"
-                className="w-full h-auto rounded-lg"
-                loading="lazy"
-              />
-            </div>
+            <Card className="h-full flex flex-col justify-center">
+              <h4 className="text-2xl font-bold text-white mb-4">Who am I?</h4>
+              <p className="text-gray-400 leading-relaxed mb-6 text-lg">
+                I'm a passionate Full Stack Developer based in Kathmandu, Nepal. I specialize in building high-quality websites and applications that are not only functional but also visually stunning. 
+                With a strong foundation in both frontend and backend technologies, I bridge the gap between design and engineering.
+              </p>
+              <div className="flex gap-4">
+                <div className="bg-white/5 border border-white/10 rounded-lg px-4 py-2">
+                  <span className="block text-2xl font-bold text-white">3+</span>
+                  <span className="text-xs text-gray-400 uppercase tracking-wider">Years Exp</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-lg px-4 py-2">
+                  <span className="block text-2xl font-bold text-white">20+</span>
+                  <span className="text-xs text-gray-400 uppercase tracking-wider">Projects</span>
+                </div>
+              </div>
+            </Card>
           </motion.div>
 
+          {/* Profile Image Card */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true, amount: 0.2 }}
-            className="w-full md:w-1/2 mt-8 md:mt-0"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="md:row-span-2 h-full"
           >
-            <h3 className="text-xl sm:text-2xl font-semibold mb-3 md:mb-4 text-blue-400">
-              Web Developer & Designer
-            </h3>
-            <p className="mb-4 md:mb-6 text-gray-300 text-sm sm:text-base leading-relaxed">
-              I am a passionate full-stack web developer who loves building
-              meaningful and user-friendly web applications. Using Python Django
-              and React, I enjoy bringing ideas to life—turning simple concepts
-              into real, working products that people can use and enjoy.
-            </p>
-            <p className="mb-4 md:mb-6 text-gray-300 text-sm sm:text-base leading-relaxed">
-              What drives me most is the creative process and the constant
-              learning that comes with development. I’m excited by the challenge
-              of solving problems through code and continuously improving my
-              skills to create smarter, cleaner, and more impactful digital
-              experiences.
-            </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 mb-6 md:mb-8">
-              <div className="flex items-center text-sm sm:text-base">
-                <span className="text-blue-500 mr-2 flex-shrink-0">
-                  <svg
-                    className="w-4 h-4 sm:w-5 sm:h-5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                </span>
-                <span className="break-words">Name: Samyog Maharjan</span>
-              </div>
-              <div className="flex items-center text-sm sm:text-base">
-                <span className="text-blue-500 mr-2 flex-shrink-0">
-                  <svg
-                    className="w-4 h-4 sm:w-5 sm:h-5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                </span>
-                <span className="break-all">Email: msamyog37@gmail.com</span>
-              </div>
-              <div className="flex items-center text-sm sm:text-base">
-                <span className="text-blue-500 mr-2 flex-shrink-0">
-                  <svg
-                    className="w-4 h-4 sm:w-5 sm:h-5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                </span>
-                <span className="break-words">Location: Kathmandu, Nepal</span>
-              </div>
-              <div className="flex items-center text-sm sm:text-base">
-                <span className="text-blue-500 mr-2 flex-shrink-0">
-                  <svg
-                    className="w-4 h-4 sm:w-5 sm:h-5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                </span>
-                <span>For Jobs: Available</span>
-              </div>
-            </div>
-
-            <motion.a
-              href="/cv/Samyog-Maharjan-cv (15).pdf"
-              target="_blank"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 sm:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full text-sm sm:text-base font-medium inline-block hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
-            >
-              Download CV
-            </motion.a>
+             <Card className="h-full p-0 overflow-hidden relative group min-h-[400px]">
+                <img 
+                  src="https://media1.tenor.com/m/JwRNTvlcBF4AAAAC/mario-super-mario.gif" 
+                  alt="Creative" 
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-80"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
+                <div className="absolute bottom-8 left-8 right-8">
+                  <p className="text-white font-semibold text-lg">"Code is poetry."</p>
+                  <p className="text-gray-400 text-sm mt-1">- My Philosophy</p>
+                </div>
+             </Card>
           </motion.div>
+
+           {/* Tech Stack / Interests */}
+           <motion.div 
+             className="md:col-span-2"
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             transition={{ delay: 0.4 }}
+          >
+            <Card className="h-full">
+              <h4 className="text-xl font-bold text-white mb-6">Technical Focus</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <ul className="space-y-3">
+                  <li className="flex items-center text-gray-300">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3" />
+                    Frontend Engineering
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3" />
+                    Backend Architecture
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <span className="w-2 h-2 bg-pink-500 rounded-full mr-3" />
+                    UI/UX Design
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3" />
+                    Database Design
+                  </li>
+                </ul>
+                <ul className="space-y-3">
+                   <li className="flex items-center text-gray-300">
+                    <span className="w-2 h-2 bg-yellow-500 rounded-full mr-3" />
+                    Cloud Computing
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <span className="w-2 h-2 bg-red-500 rounded-full mr-3" />
+                    Data Structures & Algorithms
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3" />
+                    SWE Tools & DevOps
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-3" />
+                    AI & ML Engineering
+                  </li>
+                </ul>
+              </div>
+            </Card>
+          </motion.div>
+
         </div>
       </div>
     </section>

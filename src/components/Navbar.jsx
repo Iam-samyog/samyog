@@ -25,45 +25,54 @@ const Navbar = () => {
 
   return (
     <motion.nav 
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-gray-900/90 backdrop-blur-sm py-2 shadow-lg' : 'bg-transparent py-4'
+      className={`fixed left-0 right-0 z-50 flex justify-center transition-all duration-300 ${
+        scrolled ? 'top-4' : 'top-0 py-6'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto max-w-[1350px] py-4 px-4 flex justify-between items-center">
+      <div 
+        className={`${
+          scrolled 
+            ? 'glass-nav bg-black/50 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)]' 
+            : 'w-full container mx-auto px-6 bg-transparent'
+        } flex justify-between items-center transition-all duration-500 max-w-[1200px] gap-8`}
+      >
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-6xl font-bold text-transparent  logosign bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500"
+          className="text-2xl font-bold text-white font-mono tracking-tighter cursor-pointer"
+          whileHover={{ scale: 1.05 }}
         >
           Samyog
         </motion.div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8 pb-3">
+        <div className="hidden md:flex space-x-1">
           {navLinks.map((link, index) => (
             <motion.a
               key={index}
               href={link.href}
-              className="hover:text-blue-400 transition-colors duration-300"
+              className="relative px-4 py-2 text-gray-300 text-sm font-medium transition-colors duration-300 group"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 + 0.3 }}
-              whileHover={{ scale: 1.1 }}
             >
-              {link.title}
+              <span className="relative z-10 group-hover:text-white transition-colors duration-300">
+                {link.title}
+              </span>
+              <span className="absolute inset-0 bg-white/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out origin-center" />
             </motion.a>
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button - Styled Cleaner */}
         <div className="md:hidden">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="text-white focus:outline-none"
+            className="text-white focus:outline-none p-2 rounded-full hover:bg-white/10 transition-colors"
           >
             <svg
               className="w-6 h-6"
@@ -95,10 +104,10 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <motion.div
-          className="md:hidden bg-gray-800 shadow-xl"
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
+          className="absolute top-20 left-4 right-4 bg-black/90 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden shadow-2xl md:hidden"
+          initial={{ opacity: 0, scale: 0.95, y: -20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.95, y: -20 }}
           transition={{ duration: 0.3 }}
         >
           <div className="flex flex-col py-4">
@@ -106,13 +115,14 @@ const Navbar = () => {
               <motion.a
                 key={index}
                 href={link.href}
-                className="py-2 px-4 hover:bg-gray-700 transition-colors duration-300"
+                className="py-3 px-6 text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-300 flex items-center space-x-2"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {link.title}
+                <span className="w-1 h-1 bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                <span>{link.title}</span>
               </motion.a>
             ))}
           </div>

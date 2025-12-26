@@ -3,12 +3,14 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { motion } from 'framer-motion';
 import { Analytics } from "@vercel/analytics/react"
+import Cursor from './components/Cursor';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -21,9 +23,9 @@ function App() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-screen bg-gray-900">
+      <div className="flex items-center justify-center h-screen bg-black">
         <motion.div
-          className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500"
+          className="text-4xl font-bold text-white tracking-widest uppercase"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
@@ -35,12 +37,14 @@ function App() {
   }
 
   return (
-    <div className="bg-gray-900  text-white overflow-hidden">
+    <div className="bg-black text-white overflow-hidden min-h-screen">
       
 
+      <Cursor />
       <Navbar />
       <Hero />
       <About />
+      <Experience />
       <Skills />
       <Projects />
       <Analytics />
