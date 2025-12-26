@@ -110,6 +110,48 @@ const Terminal = () => {
   );
 };
 
+const Typewriter = ({ words }) => {
+  const [index, setIndex] = useState(0);
+  const [subIndex, setSubIndex] = useState(0);
+  const [reverse, setReverse] = useState(false);
+  const [blink, setBlink] = useState(true);
+
+  useEffect(() => {
+    if (index === words.length) return;
+
+    if (subIndex === words[index].length + 1 && !reverse) {
+      setReverse(true);
+      return;
+    }
+
+    if (subIndex === 0 && reverse) {
+      setReverse(false);
+      setIndex((prev) => (prev + 1) % words.length);
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      setSubIndex((prev) => prev + (reverse ? -1 : 1));
+    }, Math.max(reverse ? 50 : subIndex === words[index].length ? 2000 : 80, parseInt(Math.random() * 150)));
+
+    return () => clearTimeout(timeout);
+  }, [subIndex, index, reverse, words]);
+
+  useEffect(() => {
+    const timeout2 = setInterval(() => {
+      setBlink((prev) => !prev);
+    }, 500);
+    return () => clearInterval(timeout2);
+  }, []);
+
+  return (
+    <span>
+        {words[index].substring(0, subIndex)}
+        <span className={`${blink ? "opacity-100" : "opacity-0"}`}>|</span>
+    </span>
+  );
+};
+
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-[#050505]">
@@ -130,11 +172,11 @@ const Hero = () => {
               transition={{ duration: 0.6 }}
             >
                <span className="font-mono text-blue-500 text-sm tracking-widest uppercase mb-4 block">
-                  // Software Engineer
+                  // <Typewriter words={["Software Engineer", "Backend Engineer", "AI/ML Engineer"]} />
                </span>
                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white mb-6 leading-[0.9] uppercase">
                   <span className="block text-white">Samyog</span>
-                  <span className="block text-gray-500">Maharjan.</span>
+                  <span className="block text-gray-500">Maharjan</span>
                </h1>
                <p className="text-xl text-gray-400 max-w-2xl leading-relaxed mb-10">
                   Building digital products & systems. I engineer scalable applications with a focus on performance, clean architecture, and intuitive user experiences.
@@ -144,7 +186,7 @@ const Hero = () => {
                   <a href="#projects" className="px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition-colors">
                      View Work
                   </a>
-                  <a href="/cv/Dumps.pdf" target="_blank" className="px-8 py-4 text-white border border-white/20 rounded-full hover:bg-white/5 transition-colors font-medium flex items-center gap-2">
+                  <a href="/cv/Samyog.pdf"  className="px-8 py-4 text-white border border-white/20 rounded-full hover:bg-white/5 transition-colors font-medium flex items-center gap-2">
                      Download Resume
                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
                   </a>
