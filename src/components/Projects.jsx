@@ -6,7 +6,43 @@ const Projects = () => {
 
   const projects = [
     {
-      id: 1,
+  "id": 1,
+  "title": "SnapNest",
+  "category": "Full-stack",
+  "image": "/img/SnapNest.png",
+  "description": "SnapNest is a high-performance social image platform for discovering, sharing, and saving images from anywhere on the web. Featuring a browser bookmarklet, users can curate content with a single click. Built with Django and React, SnapNest combines enterprise-level performance optimizations, real-time chat via WebSockets, seamless infinite scrolling, and debounced search for a fast, intuitive, and social experience.",
+  "challenge": "Implementing real-time social interactions, optimizing performance with minimal database queries, and ensuring seamless infinite scrolling with large volumes of image data.",
+  "solution": "Used Django REST Framework and Redis for backend performance, optimized frontend with React.memo, lazy loading, code splitting, and implemented WebSockets for real-time chat and notifications.",
+  "technologies": ["Django", "Django REST Framework", "React", "Redis", "PostgreSQL", "Cloudinary", "Tailwind CSS", "WebSockets", "Axios", "Vite"],
+  "link": "https://snap-nest-social-platform-oo5n.vercel.app/",
+  "github": "https://github.com/Iam-samyog/SnapNest-social-platform"
+},
+{
+  "id": 2,
+  "title": "Devnix",
+  "category": "Developer Tool",
+  "image": "/img/Devnix.png",
+  "description": "Devnix is an intelligent, zero-configuration Python development tool that simplifies running, checking, and managing projects. It automatically detects frameworks like Django, FastAPI, and Flask, handles environment variables, checks for security issues, and ensures your code is formatted and production-ready, all through a clean, terminal-based interface.",
+  "challenge": "Developers often juggle multiple setup steps for Python projects, including environment management, server commands, security checks, and code formatting, which slows down productivity.",
+  "solution": "Implemented a single CLI tool that intelligently detects the project framework, manages environment variables, performs security and dependency checks, runs servers, and integrates formatters and linters to streamline Python development.",
+  "technologies": ["Python", "Click", "Rich", "Django", "FastAPI", "Flask", "Pytest", "Black", "isort", "Flake8"],
+  "link": "https://iam-samyog.github.io/devnix/",
+  "github": "https://github.com/Iam-samyog/Devnix"
+},
+{
+  "id": 3,
+  "title": "EduCircle",
+  "category": "Full-stack / EdTech",
+  "image": "/img/EduCircle.png",
+  "description": "EduCircle is a collaborative study platform where students can create study rooms, chat in real-time, share and edit notes, create custom flashcards, and track study goals together. Built with React, Firebase, and a Python Flask backend for AI features, it combines responsive design, real-time communication, and modern UI/UX for a seamless learning experience.",
+  "challenge": "Students struggle to collaborate efficiently online, manage notes, and track study progress while maintaining real-time communication and secure data handling.",
+  "solution": "Implemented real-time chat, collaborative study rooms, secure note sharing with Firebase, custom flashcards, and goal tracking, along with a responsive and animated UI. Optional AI backend supports summarization and future enhancements.",
+  "technologies": ["React", "Firebase", "Python", "Flask", "Framer Motion", "React Router", "React Icons", "Axios", "date-fns", "react-hot-toast"],
+  "link": "https://edu-circle-chi.vercel.app/",
+  "github": "https://github.com/Iam-samyog/EduCircle"
+},
+    {
+      id: 4,
       title: 'E-Commerce Platform',
       category: 'Frontend',
       image: '/img/shopco.png',
@@ -18,7 +54,7 @@ const Projects = () => {
       github: 'https://github.com/Iam-samyog/E-commerceshop'
     },
     {
-      id: 2,
+      id: 5,
       title: 'Quickspace',
       category: 'Frontend',
       image: '/img/quickspace.png',
@@ -30,7 +66,7 @@ const Projects = () => {
       github: 'https://github.com/Iam-samyog/Quickspace'
     },
     {
-      id: 3,
+      id: 6,
       title: 'Informat News',
       category: 'Frontend',
       image: '/img/Informat.png',
@@ -42,7 +78,7 @@ const Projects = () => {
       github: 'https://github.com/Iam-samyog/Informat-Modern-Newspaper-Website'
     },
     {
-      id: 4,
+      id: 7,
       title: 'Luminaria Blog',
       category: 'Django',
       image: "/img/LuminariaBlog.png",
@@ -52,7 +88,7 @@ const Projects = () => {
       github: 'https://github.com/Iam-samyog/Luminaria-'
     },
     {
-        id: 5,
+        id: 8,
         title: 'FoodieX',
         category: 'Django',
         image: '/img/FoodieX.png',
@@ -62,7 +98,7 @@ const Projects = () => {
         github: 'https://github.com/Iam-samyog/FoodieX',
       },
       {
-        id: 6,
+        id: 9,
         title: 'Quizo',
         category: 'Django',
         image: '/img/quizo.png',
@@ -88,7 +124,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-mono font-bold mb-4 tracking-tight">/Projects</h2>
+            <h2 className="text-4xl font-mono font-bold mb-4 tracking-tight">Projects</h2>
             <p className="text-gray-500 max-w-md">
               Details of my projects and their implementation. 
             </p>

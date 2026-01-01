@@ -14,6 +14,18 @@ const skills = [
   { name: 'Git', category: 'Tools' },
   { name: 'Docker', category: 'DevOps' },
   { name: 'Figma', category: 'Design' },
+  { name: 'RESTAPI', category: 'API Dev' },
+  { name: 'Redis', category: 'Database' },
+  { name: 'Firebase', category: 'Database' },
+  { name: 'OAuth', category: 'Authentication' },
+  { name: 'Vercel', category: 'Deployment' },
+  { name: 'Render', category: 'Deployment' },
+  { name: 'SimpleJWT', category: 'Security' },
+  { name: 'C/C++', category: 'Programming' },
+
+
+  
+
 ];
 
 const Skills = () => {
@@ -62,7 +74,7 @@ const Skills = () => {
        {/* Floating Badges Grid */}
        <div className="container mx-auto px-4 mt-20 max-w-5xl">
          <div className="flex flex-wrap justify-center gap-4">
-            {skills.slice(0, 8).map((skill, index) => (
+            {skills.map((skill, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

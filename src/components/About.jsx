@@ -36,16 +36,15 @@ const About = () => {
             <Card className="h-full flex flex-col justify-center">
               <h4 className="text-2xl font-bold text-white mb-4">Who am I?</h4>
               <p className="text-gray-400 leading-relaxed mb-6 text-lg">
-                I'm a passionate Full Stack Developer based in Kathmandu, Nepal. I specialize in building high-quality websites and applications that are not only functional but also visually stunning. 
-                With a strong foundation in both frontend and backend technologies, I bridge the gap between design and engineering.
+               I write clean, scalable code and build thoughtful products with a strong focus on quality, performance, and user experience. I aim to create industry-standard software that solves real problems and stands the test of time.
               </p>
               <div className="flex gap-4">
                 <div className="bg-white/5 border border-white/10 rounded-lg px-4 py-2">
-                  <span className="block text-2xl font-bold text-white">3+</span>
+                  <span className="block text-2xl font-bold text-white">1+</span>
                   <span className="text-xs text-gray-400 uppercase tracking-wider">Years Exp</span>
                 </div>
                 <div className="bg-white/5 border border-white/10 rounded-lg px-4 py-2">
-                  <span className="block text-2xl font-bold text-white">20+</span>
+                  <span className="block text-2xl font-bold text-white">5+</span>
                   <span className="text-xs text-gray-400 uppercase tracking-wider">Projects</span>
                 </div>
               </div>
@@ -68,8 +67,8 @@ const About = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
                 <div className="absolute bottom-8 left-8 right-8">
-                  <p className="text-white font-semibold text-lg">"Code is poetry."</p>
-                  <p className="text-gray-400 text-sm mt-1">- My Philosophy</p>
+                  <p className="text-white font-semibold text-lg">"Even the quietest stars reshape the dark by daring to shine"</p>
+                  {/* <p className="text-gray-400 text-sm mt-1">- My Philosophy</p> */}
                 </div>
              </Card>
           </motion.div>
